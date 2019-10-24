@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="../css/popup.css"> 
+  </head>
+  <body>
+  <a href="http://check-ip.9gg.de/check-ip.php" target="_blank" id="logo"></a>
+  <div id="ip_box">
+    <div id="ip_wrapper">
+      <label for="ip" data-message="popup_page_ip">Your IP:</label>
+      <input type="text" name="ip" id="ip_field" value="loading...">
+    </div>
+
+    <ul id="details" style="display:none" class="animated fadeInDown">
+      <li><span class="lable" data-message="popup_page_dns">DNS: </span><span id="dns_field">loading</span></li>
+      <li><span class="lable" data-message="popup_page_country">Country: </span><span id="country_field"></span></li>
+    </ul>
+
+    <button class="details" id="details_button" data-message="popup_page_details"> Details</button>
+  </div>
+
+  	<script src="../js/utils.js"></script>
+    <script src="../js/popup.js"></script>
+  </body>
+</html>

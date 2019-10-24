@@ -1,0 +1,21 @@
+{
+   "name": "auto-proxy",
+   "version": "1.0.0",
+   "manifest_version": 2,
+   "description": "auto-proxy",
+   "default_locale": "en",
+   "permissions": ["proxy", "http://*/*", "https://*/*" ],
+   "background": {
+      "scripts": [ "js/lib/zepto.js", "js/utils.js", "js/proxy.js" ]
+   },
+   "browser_action": {
+      "default_icon": "images/icon128.png",
+      "default_popup": "html/popup.html",
+      "default_title": "auto-proxy"
+   },
+   "icons": {
+      "128": "images/icon128.png",
+      "16": "images/icon16.png",
+      "48": "images/icon48.png"
+   }
+}

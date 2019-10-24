@@ -1,0 +1,251 @@
+/* ID: ghlojgpiinfelppegaabbiphgomaidml */
+body {
+    padding: 0;
+    margin: 0;
+    font-family: Arial;
+    font-size: 12px;
+    color: #333;
+    padding: 10px;
+}
+
+label {
+    line-height: 22px;
+}
+
+#ip_box {
+    background-color: #E0E0E0;
+    box-shadow: 0px 0px 4px -1px #333;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    padding: 18px 40px;
+    position: relative;
+    text-align: center;
+    font-size: 12px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+#logo{
+    position: absolute;
+    top: -1px;
+    right: -1px;
+    display: block;
+    background-image: url('chrome-extension://__MSG_@@extension_id__/images/logo.png');
+    background-repeat: repeat;
+    background-position: right top;
+    background-color: transparent;
+    width: 72px;
+    height: 68px;
+    z-index: 0;
+    outline: none;
+    border:none;
+    box-shadow: none;
+    z-index: 5;
+}
+
+#ip_field {
+    outline: 0;
+    border: 1px solid #D6D6D6;
+    background: white url('chrome-extension://__MSG_@@extension_id__/images/copy.png') 239px center no-repeat;
+    -webkit-appearance: textfield;
+    font: 19px 'HelveticaNeue-Light', "Helvetica Neue Light", "Helvetica Neue", "Helvetica", Arial, sans-serif;
+    font-weight: 300;
+    color: #333;
+    width: 250px;
+    padding: 6px;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 1px;
+    position: relative;
+    z-index: 10;
+}
+
+#details {
+    margin-top: 12px;
+    list-style: none;
+    padding: 0;
+    text-align: left;
+}
+
+#details li {
+    padding: 0;
+    margin: 0;
+}
+
+#details li .lable {
+    display: inline-block;
+    min-width: 60px;
+}
+
+#dns_field, #country_field {
+    font-weight: normal;
+}
+
+button {
+    border: none;
+    background: none;
+    display: block;
+    color: #333;
+    text-align: left;
+    font-size: 12px;
+    cursor: pointer !important;
+}
+
+button::before {
+    display: inline-block;
+    content: "\00AB   ";
+    margin-right: 5px;
+    -webkit-transform: rotate(-90deg);
+}
+
+button:hover {
+    color: #666;
+}
+
+.msg {
+  background-color: white;
+  border-radius: 3px 3px 0 0;
+  border: 1px solid #D6D6D6;
+  font-size: 75%;
+  margin-left: 10px;
+  position: absolute;
+  right: 40px;
+  top: 26px;
+  font-weight: normal;
+  border-bottom: none;
+  padding: 3px 4px;
+  background-color: #E3F8E7;
+  color: #333;
+  z-index: 15;
+}
+
+.animated {
+    -webkit-animation-fill-mode: both;
+    -moz-animation-fill-mode: both;
+    -ms-animation-fill-mode: both;
+    -o-animation-fill-mode: both;
+    animation-fill-mode: both;
+    -webkit-animation-duration: 1s;
+    -moz-animation-duration: 1s;
+    -ms-animation-duration: 1s;
+    -o-animation-duration: 1s;
+    animation-duration: 1s;
+}
+
+.animated.hinge {
+    -webkit-animation-duration: 2s;
+    -moz-animation-duration: 2s;
+    -ms-animation-duration: 2s;
+    -o-animation-duration: 2s;
+    animation-duration: 2s;
+}
+
+@-webkit-keyframes fadeInDown {
+    0% {
+        opacity: 0;
+        -webkit-transform: translateY(-20px);
+    }
+
+    100% {
+        opacity: 1;
+        -webkit-transform: translateY(0);
+    }
+}
+
+@-moz-keyframes fadeInDown {
+    0% {
+        opacity: 0;
+        -moz-transform: translateY(-20px);
+    }
+
+    100% {
+        opacity: 1;
+        -moz-transform: translateY(0);
+    }
+}
+
+@-o-keyframes fadeInDown {
+    0% {
+        opacity: 0;
+        -ms-transform: translateY(-20px);
+    }
+
+    100% {
+        opacity: 1;
+        -ms-transform: translateY(0);
+    }
+}
+
+@keyframes fadeInDown {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fadeInDown {
+    -webkit-animation-name: fadeInDown;
+    -moz-animation-name: fadeInDown;
+    -o-animation-name: fadeInDown;
+    animation-name: fadeInDown;
+}
+
+@-webkit-keyframes fadeOutUp {
+    0% {
+        opacity: 1;
+        -webkit-transform: translateY(0);
+    }
+
+    100% {
+        opacity: 0;
+        -webkit-transform: translateY(-20px);
+    }
+}
+
+@-moz-keyframes fadeOutUp {
+    0% {
+        opacity: 1;
+        -moz-transform: translateY(0);
+    }
+
+    100% {
+        opacity: 0;
+        -moz-transform: translateY(-20px);
+    }
+}
+
+@-o-keyframes fadeOutUp {
+    0% {
+        opacity: 1;
+        -o-transform: translateY(0);
+    }
+
+    100% {
+        opacity: 0;
+        -o-transform: translateY(-20px);
+    }
+}
+
+@keyframes fadeOutUp {
+    0% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    100% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+}
+
+.fadeOutUp {
+    -webkit-animation-name: fadeOutUp;
+    -moz-animation-name: fadeOutUp;
+    -o-animation-name: fadeOutUp;
+    animation-name: fadeOutUp;
+}

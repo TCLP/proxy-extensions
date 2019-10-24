@@ -1,0 +1,38 @@
+{
+   "context_menu_paste_ip": {
+      "message": "Paste IP"
+   },
+   "extension_description": {
+      "message": "Auto-Proxy"
+   },
+   "extension_name": {
+      "message": "Auto-Proxy"
+   },
+   "popup_page_clipboard_autocopy": {
+      "message": "Clipboard autocopy"
+   },
+   "popup_page_copied": {
+      "message": "copied!"
+   },
+   "popup_page_country": {
+      "message": "Country"
+   },
+   "popup_page_details": {
+      "message": "Details"
+   },
+   "popup_page_dns": {
+      "message": "DNS"
+   },
+   "popup_page_hide_details": {
+      "message": "Hide details"
+   },
+   "popup_page_ip": {
+      "message": "Your IP"
+   },
+   "popup_page_set_shorcut": {
+      "message": "Set shortcut"
+   },
+   "popup_page_shorcut": {
+      "message": "Shortcut: "
+   }
+}
