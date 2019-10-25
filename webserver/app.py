@@ -1,5 +1,6 @@
 from flask_script import Manager, Server
 from fs.init_app import app
+from fs.init_db import redis_db
 from fs.api import api
 
 
@@ -8,6 +9,12 @@ api.bind_app(app)
 
 # 以下是启动参数
 manager = Manager(app)
+
+
+@manager.command
+def redis_test():
+	"""测试redis db"""
+	redis_db.setex("testkey", 20, "testvalue")
 
 
 @manager.command

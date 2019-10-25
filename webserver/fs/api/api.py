@@ -7,5 +7,6 @@ def bind_app(app):
     from . import welcome
     api.add_resource(welcome.Index, '/api/welcome')
 
-	from . import proxy
-	api.add_resource(proxy.ProxyList, '/api/proxylsit')
+    from . import proxy
+    api.add_resource(proxy.ProxyList, '/api/proxylist')
+    api.add_resource(proxy.ProxyList02, '/api/proxylist02')

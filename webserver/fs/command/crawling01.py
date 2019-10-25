@@ -1,5 +1,8 @@
 import requests
 import re
+from fs.init_db import redis_db
+from fs import config
+
 
 
 socks5_list = []
@@ -21,18 +24,17 @@ def scan():
 
 def check():
 	global socks5_list
-
-	proxies = []
-	for proxy in socks5_list:
-		proxies.append({"http":"socks5://"+proxy, "https":"socks5://"+proxy})
-
-	for proxy in proxies:
+	for item in socks5_list:
+		proxy = {"http":"socks5://"+item, "https":"socks5://"+item}
 		try:
-			rep = requests.get("http://myip.ipip.net", proxies=proxy, timeout=5)
+			rep = requests.get("http://myip.ipip.net", proxies=proxy, timeout=3)
 			if rep.status_code == 200:
-				print(proxy)
+				host = item.split(':')[0]
+				port = item.split(':')[1]
+				print(host, "  :  ", port)
+				redis_db.setex(host, config.REDIS_EXPIRES, port)
 		except:
-			print("timeout")
+			pass
 
 def main():
 	scan()

@@ -1,5 +1,54 @@
-var index = 0;
+var server = {
+	mode: "fixed_servers",
+	rules: {
+		proxyForHttp: {
+			scheme: "socks5",
+			host: "103.101.207.165",
+			port: 24105
+		},
+		proxyForHttps: {
+			scheme: "socks5",
+			host: "103.101.207.165",
+			port: 24105
+		},
+		bypassList: ["baidu.com"]
+	}
+}
 
+function httpRequest(url, callback){
+    var xhr = new XMLHttpRequest();
+    xhr.open("GET", url, true);
+    xhr.onreadystatechange = function() {
+        if (xhr.readyState == 4) {
+            callback(xhr.responseText);
+        }
+    }
+    xhr.send();
+}
+
+setInterval(function(){
+	httpRequest('http://127.0.0.1:8081/api/proxylist', function(result){
+		var data = JSON.parse(result)
+		server["rules"]["proxyForHttp"]["host"] = data["data"]["host"];
+		server["rules"]["proxyForHttp"]["port"] = data["data"]["port"];
+		server["rules"]["proxyForHttps"]["host"] = data["data"]["host"];
+		server["rules"]["proxyForHttps"]["port"] = data["data"]["port"];
+	});
+}, 10000);
+
+
+setInterval(function(){
+   chrome.proxy.settings.set(
+        {value: server},
+        function(){}
+    );
+}, 15000);
+
+
+
+
+
+/*
 var config = [
     {
         mode: "fixed_servers",
@@ -55,4 +104,4 @@ setInterval(function(){
         function(){}
     );
 }, 10000);
-
+*/
