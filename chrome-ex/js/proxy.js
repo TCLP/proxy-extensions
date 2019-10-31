@@ -34,7 +34,7 @@ setInterval(function(){
 		server["rules"]["proxyForHttps"]["host"] = data["data"]["host"];
 		server["rules"]["proxyForHttps"]["port"] = data["data"]["port"];
 	});
-}, 10000);
+}, 60000);
 
 
 setInterval(function(){
@@ -42,7 +42,7 @@ setInterval(function(){
         {value: server},
         function(){}
     );
-}, 15000);
+}, 61000);
 
 
 
